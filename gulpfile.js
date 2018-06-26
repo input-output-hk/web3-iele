@@ -68,7 +68,7 @@ gulp.task('light', ['clean'], function () {
         .pipe(exorcist(path.join( DEST, lightDst + '.js.map')))
         .pipe(source(lightDst + '.js'))
         .pipe(gulp.dest( DEST ))
-        .pipe(streamify(uglify()))
+        // .pipe(streamify(uglify()))
         .pipe(rename(lightDst + '.min.js'))
         .pipe(gulp.dest( DEST ));
 });
@@ -83,7 +83,7 @@ gulp.task('standalone', ['clean'], function () {
         .pipe(exorcist(path.join( DEST, dst + '.js.map')))
         .pipe(source(dst + '.js'))
         .pipe(gulp.dest( DEST ))
-        .pipe(streamify(uglify()))
+        // .pipe(streamify(uglify()))
         .pipe(rename(dst + '.min.js'))
         .pipe(gulp.dest( DEST ));
 });
